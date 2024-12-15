@@ -84,7 +84,7 @@ for filename in os.listdir(INPUT_DIR):
             print(" - No subject detected. Using the original image.")
 
         # Resize the image to the target resolution
-        resized_image = cropped_image.resize(TARGET_SIZE, Image.ANTIALIAS)
+        resized_image = cropped_image.resize(TARGET_SIZE, Image.Resampling.LANCZOS)
 
         # Save the processed image
         output_path = os.path.join(OUTPUT_DIR, filename)

@@ -16,7 +16,7 @@ def encode_image(image_path):
         return None
 
 # Path to your image
-image_path = "images/processed_photos/zeke1.PNG"
+image_path = "path_to_your_image.jpg"
 
 # Getting the base64 string
 base64_image = encode_image(image_path)
@@ -37,7 +37,7 @@ messages = [
         "content": [
             {
                 "type": "text",
-                "text": "Describe the dog in this image."
+                "text": "What's in this image?"
             },
             {
                 "type": "image_url",
