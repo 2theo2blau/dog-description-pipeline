@@ -1,34 +1,24 @@
 #!/bin/bash
 
-# Define the directory containing the Python scripts
-APP_DIR="app"
-SCRIPTS=("preprocess.py" "encode.py" "requests.py" "compliment.py")
+# Define the directory where the Python scripts are located
+SCRIPTS_DIR="app"
 
-# Activate the conda environment first
-source activate dog-compliment || {
-    echo "Could not activate the conda environment."
-    exit 1
-}
+# An array of script names in the order they should be executed
+SCRIPTS=(preprocess.py encode.py requests.py compliment.py)
 
-# Function to run a Python script and check its exit status
+# Function to run a single Python script safely
 run_script() {
     local script=$1
-    echo "Running $script..."
-    "$APP_DIR/$script" || {
-        echo "Error running $script. Exiting."
+    echo "Executing $script..."
+    python "$SCRIPTS_DIR/$script" || {
+        echo "Error: $script failed to execute."
         exit 1
     }
-    echo "$script completed successfully."
 }
 
-# Loop through the scripts and run them one by one
+# Iterate over the array and run each script in sequence
 for script in "${SCRIPTS[@]}"; do
-    if [ -f "$APP_DIR/$script" ]; then
-        run_script "$script"
-    else
-        echo "The script $APP_DIR/$script does not exist."
-        exit 1
-    fi
+    run_script "$script"
 done
 
-echo "All scripts have been executed successfully."
+echo "All scripts executed successfully."
