@@ -46,4 +46,8 @@ else
     exit 1
 fi
 
+touch images.json
+touch captions.json
+touch responses.json
+
 echo "Environment $ENV_NAME initialized with Python 3.11, directories created, and requirements installed."
