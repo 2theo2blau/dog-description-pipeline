@@ -7,8 +7,8 @@ PYTHON_VERSION="3.11"
 # Define paths
 CONDA_ENV_PATH="$PWD/$ENV_NAME"
 IMAGES_DIR="$PWD/images"
-INPUT_IMG_DIR="$IMAGES_DIR/input-images"
-PROCESSED_IMG_DIR="$IMAGES_DIR/processed-images"
+INPUT_IMG_DIR="$IMAGES_DIR/input_photos"
+PROCESSED_IMG_DIR="$IMAGES_DIR/processed_photos"
 REQUIREMENTS_FILE="requirements.txt"
 
 # Create the environment if it doesn't exist
