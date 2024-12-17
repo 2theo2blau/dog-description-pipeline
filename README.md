@@ -11,3 +11,7 @@ graph TD
     B --> C[Send to Pixtral for neutral caption]
     C --> D[Send caption to dog complimenting agent for personalized compliment]
 ```
+
+# Running the application
+
+To run the application, first run the setup_environment.sh script. Then, activate the dog-description conda environment, place an image (or a few) in the input_photos directory, and run using either the run.sh script or incrementally by running preprocess.py, followed by encode.py, requests.py and then compliment.py (you may need to configure your own dog compliment agent for this). The neutral descriptions will be written to captions.json, and the compliments to responses.json.
