@@ -1,0 +1,7 @@
+images/
+images.json
+captions.json
+responses.json
+.env
+audio/
+.DS_Store
