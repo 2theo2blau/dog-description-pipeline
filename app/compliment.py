@@ -3,7 +3,7 @@ from mistralai import Mistral
 import json
 
 # Load the API key from the environment variable
-api_key = os.environ["MISTRAL_API_KEY"]
+api_key = os.getenv("MISTRAL_API_KEY")
 client = Mistral(api_key=api_key)
 
 def process_captions(input_json, output_json):
@@ -22,7 +22,7 @@ def process_captions(input_json, output_json):
 
         # Send the caption as a prompt to the Mistral agent
         chat_response = client.agents.complete(
-            agent_id="ag:5bbf3498:20241215:dog-complimentor:0a8573cd",
+            agent_id="ag:16aad2f0:20250305:dog-complimentor:6886ab50",
             messages=[
                 {
                     "role": "user",

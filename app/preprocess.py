@@ -12,8 +12,8 @@ INPUT_DIR = 'images/input_photos'      # Replace with your input directory path
 OUTPUT_DIR = 'images/processed_photos' # Replace with your desired output directory path
 
 # Define target resolution
-TARGET_WIDTH = 640
-TARGET_HEIGHT = 640
+TARGET_WIDTH = 800
+TARGET_HEIGHT = 1200
 TARGET_SIZE = (TARGET_WIDTH, TARGET_HEIGHT)
 
 # Create output directory if it doesn't exist
