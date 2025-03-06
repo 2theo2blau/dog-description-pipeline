@@ -60,7 +60,7 @@ def convert_compliment_to_audio(input_json, output_dir, voice_id, model_id, outp
 
 input_json = "responses.json"
 output_dir = "audio"
-voice_id = ""
+voice_id = "g45NCggYaclvkMq2KNuc"
 model_id = "eleven_flash_v2_5"
 output_format = "mp3_44100_128"
 
